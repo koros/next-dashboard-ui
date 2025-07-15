@@ -51,11 +51,13 @@ Prod stage: Builds and serves the production-optimized Next.js app using npm sta
 
 ### 🧪 Development Setup (with hot reload)
 #### 1. Create .env.dev
+```
 NODE_ENV=development
 NEXT_PUBLIC_API_URL=http://localhost:3000/api
+```
 
 #### 2. Run the container
-docker compose -f docker-compose.dev.yml --env-file .env.dev up --build
+``` docker compose -f docker-compose.dev.yml --env-file .env.dev up --build ```
 #### 3. Access the app
 Visit http://localhost:3000 in your browser. Changes to files will automatically reload the app.
 
