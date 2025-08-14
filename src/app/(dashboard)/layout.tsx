@@ -1,0 +1,28 @@
+import Link from "next/link";
+import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import Menu from "@/components/Menu";
+
+export default function DashboardLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+      <div className="h-screen flex">
+        {/* Sidebar */}
+        <div className="w-[16%] md:w-[8%] lg:w-[16%] xl:w-[16%] p-4">
+           <Link href="/" className="flex items-center justify-center lg:justify-start gap-2">
+             <Image src="/logo.png" alt="logo" width="32" height="32"/>
+             <span className="hidden lg:block">SchooLama</span>
+           </Link>
+           <Menu/>
+        </div>
+        {/* Main Content */}
+        <div className="w-[84%] md:w-[92%] lg:w-[84%] xl:w-[84%] bg-[#f7f9fa] overflow-scroll">
+          <Navbar />
+          {children}
+        </div>
+      </div>
+  );
+}
