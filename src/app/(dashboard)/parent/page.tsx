@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const ParentPage = () => {
-  return (
-    <div>ParentPage</div>
-  )
-}
+  return <div>ParentPage</div>;
+};
 
-export default ParentPage
+export default ParentPage;
